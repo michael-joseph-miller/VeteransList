@@ -1,8 +1,26 @@
-body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
-  background-color: #333
+@use 'sass:list'
+@use './partials/grid'
+@use './partials/colors'
+@use './normalize.css'
+  
+p
+  margin: 0
 
-a
-  color: #00B7FF
-  text-decoration: none
+.header, .footer
+  background-color: colors.$title-bar-bg
+
+body
+  @include grid.setup
+  color: colors.$text-main
+  min-height: 100vh
+  margin: 0
+  padding: 0 20vmax 0 20vmax
+header
+  min-height: 3rem
+  grid-column: list.slash(1, grid.$numColumns + 1)
+  .title
+    margin: 0
+footer
+  min-height: 2rem
+  grid-column: list.slash(1, grid.$numColumns + 1)
+  grid-row: list.slash(grid.$numRows, calc( grid.$numRows + 1 ))

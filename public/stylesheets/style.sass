@@ -24,3 +24,17 @@ footer
   min-height: 2rem
   grid-column: list.slash(1, grid.$numColumns + 1)
   grid-row: list.slash(grid.$numRows, calc( grid.$numRows + 1 ))
+
+body#mia-page
+  grid-template-columns: 1fr
+  grid-template-rows: 3rem auto 2rem
+  column-gap: 0
+  main
+    grid-row: list.slash(2,2)
+    overflow: scroll
+    img
+      display: block
+      width: 100%
+      margin: 1rem 0
+  footer
+    grid-row: list.slash(3,3)

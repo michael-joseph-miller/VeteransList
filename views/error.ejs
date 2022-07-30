@@ -1,3 +1,21 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('includes/head'); %>
+</head>
+
+<body id='mia-page'>
+  <%- include('includes/header'); %>
+  <main>
+    <img src="images/United_States_POW-MIA_flag.svg" alt="">
+    <h1><%= status %> <%= message %></h1>
+    <pre><%= stack %></pre>
+  </main>
+  <%- include('includes/footer'); %>
+
+  <!-- Load subscribe.js - subscribes to middleware for browser refresh -->
+  <script src="javascripts/subscribe.js"></script>
+</body>
+
+</html>

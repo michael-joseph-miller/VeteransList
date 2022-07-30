@@ -5,7 +5,7 @@
   "main": "./bin/www",
   "scripts": {
     "start": "node",
-    "dev": "DEBUG=veteranslist:* nodemon --trace-uncaught"
+    "dev": "DEBUG=veteranslist:* NODE_ENV=dev nodemon --trace-uncaught"
   },
   "dependencies": {
     "cookie-parser": "^1.4.4",
